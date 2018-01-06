@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# script/server: Start the server
+
+export FLASK_APP=drask
+export FLASK_DEBUG=true
+
+pip install -e .
+
+flask run

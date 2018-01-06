@@ -1,0 +1,17 @@
+#!/bin/sh
+
+# script/setup: Setup the dev environment
+
+if [ ! `which virtualenv` ]; then
+  pip3 install virtualenv
+fi
+
+if [ ! `which virtualenvwrapper` ]; then
+  pip3 install virtualenvwrapper
+fi
+
+source virtualenvwrapper.sh
+
+mkvirtualenv drask-venv
+
+echo 'Done! Please run `workon drask-venv` to enter virtualenv.'
